@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rupeeflo Onboarding Lab</title>
+<style>
+:root{--bg:#fbfaf9;--panel:#fff;--ink:#17171a;--muted:#6a6a72;--line:#e7e4e0;
+  --accent:#1c5d8c;--ok:#1f6f4a;--bad:#8a5a1f;--warn:#b4411f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131318;--panel:#1c1c23;--ink:#eceaf0;--muted:#9b99a3;--line:#2b2b35;
+  --accent:#7cc0ef;--ok:#6fcf97;--bad:#e0b25e;--warn:#e87f52}}
+:root[data-theme="dark"]{--bg:#131318;--panel:#1c1c23;--ink:#eceaf0;--muted:#9b99a3;
+  --line:#2b2b35;--accent:#7cc0ef;--ok:#6fcf97;--bad:#e0b25e;--warn:#e87f52}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.65 ui-sans-serif,-apple-system,"Segoe UI",Inter,system-ui,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:48px 16px 80px}
+h1{font-size:clamp(1.7rem,4.5vw,2.4rem);line-height:1.15;margin:0 0 8px;letter-spacing:-.025em}
+h2{font-size:1.15rem;margin:46px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 6px}
+.lede{color:var(--muted);max-width:64ch;margin:0 0 26px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;margin:12px 0;overflow-x:auto}
+.kpis{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:24px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.kpi .n{font-size:1.5rem;font-weight:650;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi .l{color:var(--muted);font-size:.82rem;margin-top:2px}
+table{width:100%;border-collapse:collapse;font-size:.9rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap}
+th{color:var(--muted);font-weight:600;font-size:.76rem;text-transform:uppercase;letter-spacing:.05em}
+tbody tr:last-child td{border-bottom:none}
+td.why{color:var(--muted);font-size:.83rem}
+tr.hi td{color:var(--accent);font-weight:600}
+.chip{display:inline-block;padding:1px 9px;border-radius:999px;font-size:.74rem;
+  font-weight:650;white-space:nowrap;border:1px solid currentColor}
+.chip.ok{color:var(--ok)} .chip.bad{color:var(--bad)} .chip.warn{color:var(--warn)}
+.note{font-size:.88rem;color:var(--muted);max-width:66ch}
+a{color:var(--accent)}
+</style></head><body><div class="wrap">
+
+<h1>Where the seven days go</h1>
+<p class="sub">Rupeeflo's published onboarding flow and brokerage, taken apart</p>
+<p class="lede">Rupeeflo publishes its whole account-opening flow, its step timings and
+both brokerage schedules. That is unusual, and it means three product questions can be
+answered from the outside, with arithmetic rather than opinion.</p>
+
+<div class="kpis">
+  <div class="kpi"><div class="n">&#8377;10,000</div><div class="l">trade size below which the account choice is cost-neutral</div></div>
+  <div class="kpi"><div class="n">4&times;</div><div class="l">the largest the brokerage gap ever gets</div></div>
+  <div class="kpi"><div class="n">55 min</div><div class="l">customer effort across the 7-day process</div></div>
+  <div class="kpi"><div class="n">71%</div><div class="l">of elapsed time is courier transit</div></div>
+</div>
+
+<h2>1. The brokerage difference does not exist for most customers</h2>
+<div class="panel">
+<table><thead><tr><th class='n'>Trade value (&#8377;)</th><th class='n'>NRE (PIS)</th>
+<th class='n'>NRO (Non-PIS)</th><th class='n'>Ratio</th><th></th></tr></thead>
+<tbody><tr class=hi><td class='n'>2,000</td><td class='n'>10</td><td class='n'>10</td><td class='n'>1.00&times;</td><td>identical</td></tr><tr class=hi><td class='n'>5,000</td><td class='n'>25</td><td class='n'>25</td><td class='n'>1.00&times;</td><td>identical</td></tr><tr class=hi><td class='n'>10,000</td><td class='n'>50</td><td class='n'>50</td><td class='n'>1.00&times;</td><td>identical</td></tr><tr><td class='n'>25,000</td><td class='n'>125</td><td class='n'>50</td><td class='n'>2.50&times;</td><td></td></tr><tr><td class='n'>40,000</td><td class='n'>200</td><td class='n'>50</td><td class='n'>4.00&times;</td><td></td></tr><tr><td class='n'>100,000</td><td class='n'>200</td><td class='n'>50</td><td class='n'>4.00&times;</td><td></td></tr><tr><td class='n'>500,000</td><td class='n'>200</td><td class='n'>50</td><td class='n'>4.00&times;</td><td></td></tr></tbody></table>
+</div>
+<p class="note">Both schedules are &ldquo;0.5% or a flat cap, whichever is lower&rdquo; &mdash;
+&#8377;200 on NRE, &#8377;50 on NRO. Below <strong>&#8377;10,000</strong> a trade the
+percentage binds for both and the two accounts cost <strong>exactly the same</strong>. The gap
+opens between &#8377;10,000 and &#8377;40,000 and then <strong>stops growing forever</strong> at
+4&times;. A customer investing &#8377;25,000 a month pays
+<strong>&#8377;900 a year</strong> more on NRE &mdash; against
+<strong>31.2% TDS</strong> on NRO interest, which is the number that actually moves money.
+A comparison table that leads with brokerage is leading with the least important row.</p>
+
+<h2>2. The account choice is usually not a choice</h2>
+<div class="panel">
+<table><thead><tr><th>Customer</th><th>Outcome</th><th class='n'>Settled by</th>
+<th>Why</th></tr></thead><tbody><tr><td>Converting an existing Zerodha account</td><td><span class='chip bad'>NRO (Non-PIS)</span></td><td class='n'>constraint</td><td class='why'>Converting an existing Zerodha account: only NRO-linked conversion is supported</td></tr><tr><td>Wants F&O</td><td><span class='chip bad'>NRO (Non-PIS)</span></td><td class='n'>constraint</td><td class='why'>FNO is not available on the NRE (PIS) route</td></tr><tr><td>Bank not PIS-enabled</td><td><span class='chip bad'>NRO (Non-PIS)</span></td><td class='n'>constraint</td><td class='why'>Bank is not on the PIS-enabled list, so the NRE (PIS) route is closed</td></tr><tr><td>Has Indian rental income</td><td><span class='chip ok'>NRO (Non-PIS)</span></td><td class='n'>choice</td><td class='why'>Indian-source income has to be routed through an NRO account</td></tr><tr><td>Foreign earnings only</td><td><span class='chip ok'>NRE (PIS)</span></td><td class='n'>choice</td><td class='why'>Only foreign earnings are being invested</td></tr><tr><td>Indian income + >$1M repatriation</td><td><span class='chip warn'>Both accounts</span></td><td class='n'>choice</td><td class='why'>Repatriation need exceeds the $1M/year NRO ceiling, so foreign earnings belong in an NRE account alongside it</td></tr></tbody></table>
+</div>
+<p class="note">Of six representative profiles,
+<strong>3 of 6</strong> are settled by a hard
+constraint before preference enters: conversion is NRO-only, derivatives are NRO-only, and a
+bank outside the PIS list closes the NRE route entirely. The customer already knows the answer
+to all of these. <strong>4 questions resolve every branch</strong>,
+including the one case a wizard must refuse to answer &mdash; Indian income plus a repatriation
+need above the $1M NRO ceiling needs both accounts, and a human.</p>
+
+<h2>3. Seven days, fifty-five minutes</h2>
+<div class="panel">
+<table><thead><tr><th>Step</th><th class='n'>Elapsed</th><th class='n'>Customer effort</th>
+<th>Appointment?</th><th>Published source</th></tr></thead><tbody><tr><td>Upload documents</td><td class='n'>1</td><td class='n'>20 min</td><td>&mdash;</td><td class='why'>page: six documents, verification about one working day</td></tr><tr><td>Notary video call</td><td class='n'>1</td><td class='n'>30 min</td><td>yes</td><td class='why'>page: 15-minute call, notarisation about another 15 minutes</td></tr><tr><td>Courier to Zerodha</td><td class='n'>5</td><td class='n'>5 min</td><td>&mdash;</td><td class='why'>page: documents reach Zerodha in about five days</td></tr></tbody></table>
+</div>
+<p class="note">The published step timings reconcile exactly with the published
+<strong>7-day</strong> headline, which is worth checking before trusting either. The customer
+spends <strong>55 minutes</strong> in total;
+<strong>99.5%</strong> of the elapsed time is
+waiting, and <strong>71%</strong> is a courier moving
+paper after the customer has already finished. So the lever on &ldquo;it takes a week&rdquo; is
+mostly <em>communication</em>, not speed. Exactly one step &mdash; the notary call &mdash;
+needs the customer to meet another person at a set time, and that is the only step that can
+fail on calendars rather than on effort.</p>
+
+<h2>4. And three good steps still lose a quarter of the cohort</h2>
+<div class="panel">
+<table><thead><tr><th>Step</th><th class='n'>Entering</th><th class='n'>Surviving</th>
+<th class='n'>Lost</th></tr></thead><tbody><tr><td>Upload documents</td><td class='n'>100%</td><td class='n'>90.0%</td><td class='n'>10.0 pp</td></tr><tr><td>Notary video call</td><td class='n'>90%</td><td class='n'>81.0%</td><td class='n'>9.0 pp</td></tr><tr><td>Courier to Zerodha</td><td class='n'>81%</td><td class='n'>72.9%</td><td class='n'>8.1 pp</td></tr></tbody></table>
+</div>
+<p class="note">Every step at a healthy 90% still ends at
+<strong>72.9%</strong> end to end &mdash; sequential completion
+compounds, and three steps at 90% is not 90%. At equal rates the <em>earliest</em> step costs
+the most customers in absolute terms, which is an argument for moving whatever can be moved
+later in the flow. <strong>These rates are an assumption, not a measurement</strong> &mdash;
+no drop-off data is published, and none is invented here. What the model supplies is the
+arithmetic; the rates would come from Rupeeflo's own funnel.</p>
+
+<h2>What I would want before proposing anything</h2>
+<p class="note">Real completion rates per step, and the distribution of customer trade sizes
+&mdash; the first decides which step to attack, the second decides whether the brokerage row
+deserves its prominence at all. Also where the notary call gets rescheduled, since that is the
+only step with a coordination failure mode, and whether the courier step can report progress,
+since that is where most of the week goes.</p>
+
+<p class="note" style="margin-top:40px">
+Built for a Rupeeflo PS-II application by Pavitra Seth. Every published figure is from
+rupeeflo.com/product, read 22 November 2026; nothing here is tax advice. &middot;
+<a href="https://github.com/f20220970-debug/rupeeflo-onboarding-lab/blob/main/src/pricing.py">Brokerage</a> &middot;
+<a href="https://github.com/f20220970-debug/rupeeflo-onboarding-lab/blob/main/src/advisor.py">Account rules</a> &middot;
+<a href="https://github.com/f20220970-debug/rupeeflo-onboarding-lab/blob/main/src/onboarding.py">Flow</a> &middot;
+<a href="https://github.com/f20220970-debug/rupeeflo-onboarding-lab/blob/main/tests/test_findings.py">18 tests</a> &middot;
+<a href="https://github.com/f20220970-debug/rupeeflo-onboarding-lab">Repository</a>
+</p>
+</div></body></html>
